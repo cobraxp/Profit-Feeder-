@@ -3,7 +3,7 @@
     "BaAseCurrency": "ETH", // MARKET
     "BuyStrategy": "EMASPREAD", // ALL_buy_strategy
     "BuyValue": "-1.45", // ALL_buy_value
-	"BuyValueLimit": "0", // ALL_buy_value_limit used for SPREAD and CROSS strategies only
+    "BuyValueLimit": "0", // ALL_buy_value_limit used for SPREAD and CROSS strategies only
     "Cost": "0.030", // ALL_max_cost or or All_max_cost_percentage
     "DcaEnabled": "-2", // ALL_DCA_enabled
     "DcaMaxBuySpread": "2", // max_buy_spread in DCA.properties
@@ -16,9 +16,9 @@
     "DcaTrailingBuy": "0.077", // trailing_buy in DCA.properties
     "DcaTrailingProfit": "0.117", // trialing_profit in DCA.properties
     "ExcludedPairs": "BNB,BTG,BCD,BLZ,BCPT,IOST,ELF,VIB,LEND,ICN,AE,ADX,AMB,ARN,APPC,CMT,CHAT,CDT,CND,CTR,DLT,DNT,ENG,ENJ,EVX,FUEL,GTO,GVT,GXS,INS,KNC,MANA,MCO,MDA,MOD,MTH,NEBL,NULS,OAX,OST,PPT,RCN,RLC,SNM,SNT,TNB,TNT,TRIG,VIA,VIBE,WABI,XZC,YOYO,ZRX", // coins you don't want PTF to create settings for. These will have no config generated and will appear in watchmode
-    "SomOnlyPairs": "BTG,BCD,TRIG,MTL,SWIFT,ARDR,SAFEX,BTA,DAR,DRACO,SLING,CRYPT,DOGE,UNO,SC,INCNT,NAUT,SJCX,NOTE,TKN,TIME,BLZ,APPC,GXS", // these are coins where BASE_COIN_sell_only_mode will be true
+    "SomOnlyPairs": "TRIG,MTL,SWIFT,ARDR,SAFEX,BTA,DAR,DRACO,SLING,CRYPT,DOGE,UNO,SC,INCNT,NAUT,SJCX,NOTE,TKN,TIME,BLZ,APPC,GXS", // these are coins where BASE_COIN_sell_only_mode will be true
     "DcaExcluded": "BNB", // coins you don't want DCA enabled for no matter what
-	"EnabledPairsOnly": "", // coins that you only want to trade. If pairs are in here and the ExcludedList, they will not be traded
+    "EnabledPairsOnly": "", // coins that you only want to trade. If pairs are in here and the ExcludedList, they will not be traded
     "MaxBuySpread": ".75", // All_max_buy_spread
     "MaxTrailingBuy": "0.215", // All_trailing_buy
     "MaxTrailingProfit": "0.215", // All_tailing_profit
