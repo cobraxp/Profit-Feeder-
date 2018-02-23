@@ -4,11 +4,11 @@
     "BuyStrategy": "EMASPREAD", // ALL_buy_strategy
     "BuyValue": "-0.89", // ALL_buy_value
     "BuyValueLimit": "0", // ALL_buy_value_limit used for SPREAD and CROSS strategies only
-    "Cost": "0.030", // ALL_max_cost or or All_max_cost_percentage
+    "Cost": "0.028", // ALL_max_cost or or All_max_cost_percentage
     "DcaEnabled": "-2", // ALL_DCA_enabled
     "DcaMaxBuySpread": "2", // max_buy_spread in DCA.properties
     "DcaMaxBuyTimes": "3", // max_buy_times in DCA.properties
-    "DcaMaxCost": "0", // max_cost in DCA.properties
+    "DcaMaxCost": "0.025", // max_cost in DCA.properties
     "DcaMinBuyBalance": "0", // min_buy_balance in DCA.properties depending on UseMinBuyBalancePercentage in hostsettings.json
     "DcaSellTrigger": "1", // sell_trigger in DCA.properties
     "DcaSellStrategy": "GAIN", // sell_strategy in DCA.properties
@@ -16,7 +16,7 @@
     "DcaTrailingBuy": "0.077", // trailing_buy in DCA.properties
     "DcaTrailingProfit": "0.117", // trialing_profit in DCA.properties
     "ExcludedPairs": "AION,BNB,BTG,BCD,BLZ,BCPT,BNT,IOST,ELF,VIB,LEND,ICN,AE,ADX,AMB,ARN,APPC,CMT,CHAT,CDT,CND,CTR,DLT,DNT,ENG,ENJ,EVX,FUEL,GTO,GVT,GXS,HSR,INS,KNC,LUN,MANA,MCO,MDA,MOD,MTH,NANO,NEBL,NULS,OAX,OST,PPT,RCN,RLC,SNM,SNT,TNB,TNT,TRIG,VIA,VIBE,WABI,XZC,YOYO,ZRX", // coins you don't want PTF to create settings for. These will have no config generated and will appear in watchmode
-    "SomOnlyPairs": "RPX,TRIG,MTL,SWIFT,ARDR,SAFEX,BTA,DAR,DRACO,SLING,CRYPT,DOGE,UNO,SC,INCNT,NAUT,SJCX,NOTE,TKN,TIME,BLZ,APPC,GXS", // these are coins where BASE_COIN_sell_only_mode will be true
+    "SomOnlyPairs": "BRD,RPX,TRIG,MTL,SWIFT,ARDR,SAFEX,BTA,DAR,DRACO,SLING,CRYPT,DOGE,UNO,SC,INCNT,NAUT,SJCX,NOTE,TKN,TIME,BLZ,APPC,GXS", // these are coins where BASE_COIN_sell_only_mode will be true
     "DcaExcluded": "BNB", // coins you don't want DCA enabled for no matter what
     "EnabledPairsOnly": "", // coins that you only want to trade. If pairs are in here and the ExcludedList, they will not be traded
     "MaxBuySpread": ".75", // All_max_buy_spread
@@ -24,13 +24,13 @@
     "MaxTrailingProfit": "0.215", // All_tailing_profit
     "MinBuyBalance": "0.001", // All_min_buy_balance or All_min_buy_balance_percentage
     "MinBuyPrice": "0.0000004", // All_min_buy_price
-    "MinBuyVolume": "200", // All_min_buy_volume
-    "MinProfit": "1.00", // All_min_profit
+    "MinBuyVolume": "500", // All_min_buy_volume
+    "MinProfit": "0.89", // All_min_profit
     "MinTrailingBuy": "0.097", // minumum the trailing buy after offsets can be
     "MinTrailingProfit": "0.0197", // minumum the trailing buy after offsets can be
     "MinutesForLongerTermTrend": "1440", // minutes to measure trend for LongerTermPriceChange
     "MinutesToMeasureTrend": "30", // minutes to measure trend for base coin trend, PriceTrendChange and volatility calc
-    "NumberOfPairs": "11", // ALL_max_trading_pairs
+    "NumberOfPairs": "12", // ALL_max_trading_pairs
     "SellStrategy": "GAIN", // ALL_sell_strategy
     "SellValue": "1", // ALL_sell_value
     "TopCurrenciesToCheck": "50" // number of pairs to check from your exchange for MaxTopCoinAverageChange
@@ -39,17 +39,29 @@
     "Configs": [
       {
         "FolderName": "01-superbear",
-		"MaxTopCoinAverageChange": "-3",
-        "SellOnlyMode": "true",
-		"DcaEnabled": "false"
+        "MaxTopCoinAverageChange": "-2",
+		"DcaMaxBuyTimesOffset": "200",
+        "BuyValueOffset": "-100",
+        "MinProfitOffset": "-20",
+        "MaxBuySpreadOffset": "25",
+        "MaxPairsOffset": "50",
       },
       {
         "FolderName": "02-bear",
-		"MaxTopCoinAverageChange": "-1"
+		"MaxTopCoinAverageChange": "-0.7",
+		"DcaMaxBuyTimesOffset": "100",
+        "DcaTrailingBuyOffset": "25",
+        "DcaTrailingProfitOffset": "-25",
+        "BuyValueOffset": "-75",
+        "MaxPairsOffset": "25",
       },
       {
         "FolderName": "03-boring",
-		"MaxTopCoinAverageChange": "0"
+        "MaxTopCoinAverageChange": "1",
+		"BuyValueOffset": "-50",
+        "MinProfitOffset": "10",
+        "MaxBuySpreadOffset": "-25",
+        "MaxPairsOffset": "-50",
       },
       {
         "FolderName": "04-bull",
